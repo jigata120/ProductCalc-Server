@@ -29,7 +29,7 @@ class UserProfileCreateView(generics.CreateAPIView):
     serializer_class = UserProfileSerializer
 
     def perform_create(self, serializer):
-        # Save the new user profile instance with auto-generated UUID
+    
         serializer.save()
 
 
