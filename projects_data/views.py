@@ -72,13 +72,11 @@ class UserProfileView(generics.RetrieveAPIView):
     serializer_class = UserProfileSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-    def get_object(self):
-        # Return the current user profile
+    def get_object(self): 
         return self.request.user
 
 
 class ProjectListView(APIView):
-    # Remove authentication classes to make the view public
     authentication_classes = []
     permission_classes = []
 
